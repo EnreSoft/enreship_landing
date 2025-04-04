@@ -319,7 +319,6 @@ z-index: -1;
 }
 
 
-
 .slider-btn:hover .btn-after{
     margin-top: -50px;
 margin-left: 0px;
@@ -641,21 +640,11 @@ color: #ff7d44;
     line-height: 61px;
     height: auto;
 }
-.slider-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  .slider-content {
+.slider-content {
     position: relative;
     z-index: 2;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  }
-  
+   
+}
 .slider-bg .banner-img {
   overflow: hidden;
   height: 738px;
@@ -1306,6 +1295,26 @@ font-size: 18px;
     margin-bottom: 20px;
     margin-top: 30px;
 }
+/* === Slider Overlay === */
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .single-slider {
+    position: relative;
+  }
+  
+  .slider-content {
+    position: relative;
+    z-index: 2;
+  }
+  
 .slider-bg .video-i i {
 background: #fff;
 padding: 14px;
@@ -1357,24 +1366,23 @@ margin-right: 10px;
 	margin-bottom: 20px;
 }
 .slider-content h2 {
+    font-size: 48px !important;
+    letter-spacing: 1.0px;
+    line-height: 1.2;
+    margin-bottom: 40px;
     color: #fff;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 20px;
-  }
-  
-  .slider-content h2 span {
-    color: #ff6a3d;
-    text-decoration: underline;
-  }
-.slider-content h5 {
-    color: #ff6a3d;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+}
+
+.slider-content h2 span {
+	color: #ff7d44;
+text-decoration: underline;
+}
+.slider-content h5{
+color: #ff7d44;
+margin-bottom: 15px;
+font-size: 22px;
+text-transform: uppercase;
+line-height: 18px;
 }
 .slider-content p span {
 	display: inline-block;
@@ -1386,30 +1394,10 @@ margin-right: 10px;
 	top: -4px;
 }
 .slider-content p {
-    color: #ddd;
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 600px;
-    margin-bottom: 30px;
-  }
-  /* Slider Button */
-  .slider-content .slider-btn .btn {
-    background-color: #ff6a3d;
-    color: white;
-    font-size: 16px;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .slider-content .slider-btn .btn:hover {
-    background-color: #e45728;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 0;
+}
 
 .p-relative{position: relative;}
 .down-arrow {
@@ -2485,6 +2473,7 @@ color: #fff;
 transform: scaleY(0);
 opacity:0;
 }
+
 .services-hover .box1 {
   content: "";
   width: 60px;
@@ -2853,12 +2842,12 @@ text-decoration: underline;
 }
 
 .services-08-item {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+    padding:40px;
+     border-radius: 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1.732px 60px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
 
 .services-08-item .readmore {
   width: 50px;
@@ -2941,25 +2930,15 @@ height: 46px;
     -webkit-box-shadow: 0px 30px 40px 0px rgba(32, 85, 125, 0.06);
     box-shadow: 0px 30px 40px 0px rgba(32, 85, 125, 0.06);
 }
-.services-08-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  }
-
-.services-08-content p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
+.services-08-content p{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;    
+    margin-bottom: 20px;
+}
 .services-08-content h3 a{
     font-weight: 700;
     color: #202020;
 }
-.services-08-content h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #202020;
-  }  
 .services-08-content a{
     font-weight: 500;
     color: #ff7d44;
@@ -3239,8 +3218,12 @@ display: grid;
   height: 500px;
   align-items: end;
   padding: 50px;
-    color: #fff;
+    color: #f6f1f1;
 }
+.col-lg-3:nth-of-type(4) .step-box {
+    margin-top: -50px;
+  }
+  
 .step-box:hover{
     background: #003b49b2;
     transition: all 0.3s ease-in-out;
@@ -11302,3 +11285,4 @@ color: #fff;
 .footer-top.wpding {
     background: #010c26;
 }
+
