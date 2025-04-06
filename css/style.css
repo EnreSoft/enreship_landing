@@ -282,7 +282,7 @@ label {
     text-transform: uppercase;
    background: #ff7d44;
     border: none;
-    border-radius: 0;
+    border-radius: 10px;
 }
 
 .btn i{
@@ -2920,7 +2920,7 @@ text-decoration: underline;
 }
 .services-08-content h3{
     margin-bottom: 15px;
-    font-size: 26px;
+    font-size: 16px;
 }
 .services-08-content,.services-08-thumb {
     position: relative;
@@ -4400,7 +4400,9 @@ color: #fff;
 }
 .cta-btn .btn{
     border: 1px solid #ff7d44;
+    border-radius: 12px;
 }
+  
 .cta-btn .btn::before{background: #ff7d44;}
 .cta-right p {
 	margin-bottom: 0;
@@ -5032,21 +5034,26 @@ left: 0;
 }
 
 .single-post2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    transition: all 0.3s ease;
+    flex: 1 1 100%;
   }
+  
+  .single-post2:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
 
   .blog-content2 {
+    flex-grow: 1;
     padding: 20px;
-    min-height: 260px; 
+    min-height: 350px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: transparent !important;
   }
   
 .single-post .blog-content {
@@ -5378,6 +5385,7 @@ padding:50px;
 float: left;
 width: 100%;
 position: relative;
+
 }
 .pricing-head .month{
 position: absolute;
@@ -5398,6 +5406,7 @@ font-weight: 700;
 .price-count sub{
     font-size: 14px;
     bottom: 5px;
+    
 }
 .pricing-head .glyph-icon::before{
 font-size: 32px;
@@ -5419,6 +5428,7 @@ border: 10px solid #eee;
     color: #101010;
     margin-bottom: 10px;
     text-transform: uppercase;
+    
 }
 .price-count h2 {
 font-size: 50px;
@@ -5855,6 +5865,30 @@ float: left;
     background-position: -180px center!important;
     background-size: cover;
 }
+.cta-area {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cta-area .blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); 
+    opacity: 0.8;     
+    z-index: 1;
+  }
+  
+  .cta-area .container {
+    position: relative;
+    z-index: 2; 
+  }
+  
+
 .f-cta-area.gray-bg {
 	background: #f4f4fe;
 	border-top: 3px solid #ff7d44;
