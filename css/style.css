@@ -618,23 +618,53 @@ line-height: 33px;
 border-radius: 50%;
 color: #ff7d44;
 }
-.top-btn {
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header-cta ul {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ikonlar arası boşluk */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .top-btn {
     background: #ff7d44;
-    padding: 16px 30px;
-    width: 100%;
-    float: left;
     color: #fff;
-    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
     text-transform: uppercase;
-}
-.top-btn i{
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }
+  
+  .top-btn:hover {
+    background: #003b49;
+    color: #fff;
+  }
+  
+  
+  
+  .top-btn:hover {
+    background: #003b49;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-2px);
+  }
+  
+  .top-btn i {
     font-size: 16px;
-    margin-left: 10px;
-}
-.top-btn:hover {
-    background: transparent linear-gradient(90deg, #ff7d440%, #ff7d44100%) 0% 0% no-repeat padding-box;
-     color: #fff;
-}
+    margin-left: 8px;
+  }
+  
 .sticky-menu .logo{
     margin-top: 0;
     line-height: 61px;
@@ -3274,9 +3304,41 @@ position: absolute;
 top: 5px;
 border-radius: 50%;
 }
+/* Step Section Background SVG */
+.step-box {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .step-icon-bg {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 0 15px 0;
+    text-align: left;
+  }
+
+  .step-box .text {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  .step-1 .step-icon-bg {
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    opacity: 0.1;
+  }
+  
+  
 .step-img {
   margin-left: -305px;
 }
+.step-4-fix {
+    transform: translateY(-20px);
+  }
+  
+  
 /* 7. video */
 
 .video-position {
@@ -4459,11 +4521,23 @@ margin-bottom: 15px !important;
 	overflow: hidden;
     margin-bottom: 20px;
 }
-.single-testimonial p {
-margin-bottom: 0;
-  padding-left: 15px;
-  border-left: 2px solid #ff7d44;
-}
+.testimonial-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 30px; 
+  }
+  
+  .single-testimonial {
+    margin: 0;
+    padding: 30px; 
+    box-sizing: border-box; 
+    min-height: 320px;
+  }
+  
+  
+  
 .testimonial-active .slick-arrow {
 	position: absolute;
 	bottom: -80px;
@@ -4956,11 +5030,25 @@ left: 0;
 	position: relative;
 	z-index: 1;
 }
+
 .single-post2 {
-display: inline-block;
-  box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.09);
-  background: #fff;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .blog-content2 {
+    padding: 20px;
+    min-height: 260px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
 .single-post .blog-content {
     position: absolute;
     bottom: 0;
@@ -5028,6 +5116,17 @@ background: #fff;
   padding: 5px 15px;
   right: 30px;
 }
+.date-home {
+    background: #ff7d44;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 12px; /* Oval köşe */
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  
 .adim-box{
     display: flex;
 }
