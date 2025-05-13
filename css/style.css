@@ -580,6 +580,178 @@ label {
   color: #374151;
   font-size: 14px;
 }
+.integration-cards-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  background: linear-gradient(to right, #e05a2b, #4e2e2e); /* turuncudan koyu kahverengiye geçiş */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.section-subtitle {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.integration-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.integration-card {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.integration-card:hover {
+  transform: translateY(-5px);
+}
+
+.integration-card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.integration-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.integration-card p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.integration-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.integration-card ul li {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.integration-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #f97316;
+  font-size: 13px;
+}
+
+.integration-btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #f97316; /* turuncu */
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.integration-btn:hover {
+  background-color: #1e293b; /* koyu lacivert */
+  color: #ffffff; /* yazı beyaz kalıyor */
+}
+.carrier-performance-section {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+  margin-top: 60px;
+}
+
+.performance-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(to right, #dc582a, #432525); /* turuncudan kahverengiye */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+.performance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.performance-row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.logo-wrap img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.bar-wrap {
+  width: 100%;
+}
+
+.bar-track {
+  background-color: #e5e7eb;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  white-space: nowrap;
+}
+
 
 
 
@@ -1343,6 +1515,91 @@ label {
 .contact-form .btn::before {
   display: none;
 }
+.contact-quote-section {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.login-btn {
+  background-color: #1e293b;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section-gradient-title {
+  font-size: 38px;
+  font-weight: 700;
+  background: linear-gradient(to right, #dc582a, #432525);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-subtitle {
+  font-size: 16px;
+  color: #475569;
+  margin: 20px 0 40px;
+}
+
+.quote-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.primary-btn {
+  padding: 12px 24px;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+}
+
+.primary-btn:hover {
+  background-color: #1e293b;
+}
+
+.map-section {
+  margin-top: 60px;
+}
+
 
 .header-btn {
   position: absolute;
